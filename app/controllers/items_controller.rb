@@ -14,11 +14,12 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-    @item = Item.new
+    @item = Item.new(item_params)
   end
 
   # GET /items/1/edit
   def edit
+    @item = Item.new(item_params)
   end
 
   # POST /items
